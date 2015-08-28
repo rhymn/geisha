@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<style>
+
+			html{
+				font-family: helvetica;
+				color: #222;
+				font-weight: bold;
+			}
+
+			.number{
+				background-color: #222;
+				opacity: 0.7;
+				border-radius: 20px;
+				padding: 10px;
+				color: #FFF;
+			}
+
+
+			#products-holder{				
+				position: absolute;
+				z-index: 1;
+				bottom: 30%;
+				left: 10%;
+			}
+
+			#donations-holder{				
+				position: absolute;
+				z-index: 1;
+				bottom: 60%;
+				left: 10%;
+			}
+
+
+			.img-responsive{
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+			
+			figure{
+				position: relative;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<figure>
+			<img class="img-responsive" src="geisha.png" />
+			<div id="products-holder">
+				PRODUCTS SOLD <strong class="number" id="products"></strong>
+			</div>
+
+			<div id="donations-holder">
+				DONATED TO BREAST CANCER <strong class="number" id="donations"></strong> SEK
+			</div>
+		</figure>
+
+	</body>
+</html>
+
+<script>
+	var today = new Date();
+	var day = today.getDate();
+	var month = today.getMonth() + 1;
+
+	var productGoal = 500000;
+
+	var currentProducts = Math.floor(productGoal / 31 * day);
+	var currentDonations = Math.floor(currentProducts / 2);
+
+	document.getElementById('products').innerHTML = currentProducts;
+	document.getElementById('donations').innerHTML = currentDonations;
+</script>
