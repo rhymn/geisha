@@ -28,7 +28,7 @@
 				left: 10%;
 			}
 
-			#donations-holder{				
+			#donations-holder{
 				position: absolute;
 				z-index: 1;
 				bottom: 60%;
@@ -63,18 +63,5 @@
 		</figure>
 
 	</body>
+	<script type="text/javascript" src="geisha.js"></script>
 </html>
-
-<script>
-	var today = new Date();
-	var day = today.getDate();
-	var month = today.getMonth() + 1;
-
-	var productGoal = 500000;
-
-	var currentProducts = Math.floor(productGoal / 31 * day);
-	var currentDonations = Math.floor(currentProducts / 2);
-
-	document.getElementById('products').innerHTML = currentProducts;
-	document.getElementById('donations').innerHTML = currentDonations;
-</script>
