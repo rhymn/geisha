@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'qwigley';
+	src: url('../Qwigley-Regular.ttf');
+}
+
+#geisha-banner{
+	letter-spacing: 1px;
+	font-family: "qwigley";
+	color: rgb(131, 10, 37);
+	font-weight: bold;
+	font-size: 80px;
+	width: 1600px;
+	height: 600px;
+}
+
+#geisha-banner .products-holder{				
+	position: absolute;
+	z-index: 1;
+	top: 385px;
+	left: 100px;
+}
+
+#geisha-banner .donations-holder{
+	position: absolute;
+	z-index: 1;
+	top: 385px;
+	left: 510px;
+}
+
+figure#geisha-banner{
+	position: relative;
+}
