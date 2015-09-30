@@ -44,12 +44,6 @@
 		var start = new Date(2015, month, 1);
 		var end = new Date(2015, month+1, 1);
 
-		// If before october
-		if(month < 10-1){
-			// Do nothing
-			return;
-		}
-
 		document.getElementById(mainId).style.display = 'block';		
 
 		// If after october
