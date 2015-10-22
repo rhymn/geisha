@@ -6,7 +6,7 @@
 //   _|    _|  _|    _|  _|_|_|    _|    _|  _|    _|_|_|    _|_|    _|      _|  
 //                                                                               
 //                                                                               
-//   Geisha Counter v1.2                                                                           
+//   Geisha Counter v1.3                                                                           
 
 // DIRECTIONS	1. Name id1 and id2 to your html elements
 //				2. Include this file at the bottom of the page
@@ -33,9 +33,6 @@
 		return string.substring(0, index) + insertable + string.substring(index, string.length);
 	}
 
-	function beforeOctober(){
-		document.getElementById(mainId).style.display = 'none';
-	}
 
 	function afterOctober(){
 		set(id1, '500 000')
@@ -47,13 +44,13 @@
 		var start = new Date(2015, month, 1);
 		var end = new Date(2015, month+1, 1);
 
-		console.log(month);
-
 		// If before october
 		if(month < 10-1){
-			beforeOctober();
+			// Do nothing
 			return;
 		}
+
+		document.getElementById(mainId).style.display = 'block';		
 
 		// If after october
 		if(month > 10-1){
