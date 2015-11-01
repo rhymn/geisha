@@ -16,7 +16,7 @@
 // @id2 		HTML id for placement #2
 // @alwaysOn	Enables october or later only if false
 
-(function(interval, id1, id2, alwaysOn){
+(function(interval, mainId, id1, id2, alwaysOn){
 	function set(id, data){
 		if (document.getElementById(id))
 			document.getElementById(id).innerHTML = data;				
@@ -33,6 +33,10 @@
 		return string.substring(0, index) + insertable + string.substring(index, string.length);
 	}
 
+	function beforeOctober(){
+		document.getElementById(mainId).style.display = 'none';
+	}
+
 	function afterOctober(){
 		set(id1, '500 000')
 		set(id2, '250 000 kr-')
@@ -43,8 +47,16 @@
 		var start = new Date(2015, month, 1);
 		var end = new Date(2015, month+1, 1);
 
+		console.log(month);
+
+		// If before october
+		if(month < 10-1){
+			beforeOctober();
+			return;
+		}
+
 		// If after october
-		if(month > 8){
+		if(month > 10-1){
 			afterOctober();
 			return;
 		}
@@ -65,4 +77,4 @@
 		calc();
 		setInterval(calc, interval);
 	}
-})(3000, 'products', 'donations', true);
+})(3000, 'geisha-banner', 'products', 'donations', true);

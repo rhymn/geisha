@@ -4,7 +4,7 @@
 }
 
 #geisha-banner{
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 	font-family: "qwigley";
 	color: rgb(131, 10, 37);
 	font-weight: bold;
@@ -24,6 +24,7 @@
 }
 
 #geisha-banner .donations-holder{
+	white-space: nowrap;
 	width: 310px;
 	text-align: center;
 
